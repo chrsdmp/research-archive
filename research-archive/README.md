@@ -68,3 +68,29 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+## ITPS205 & PELEC202 PROJECT
+
+GROUP 1 MEMBERS: 
+
+SEBUC, KARL LOUISE S.
+DE VILLA, JOHN MARC A.
+NANOY, STEPHANIE MARIE P.
+URSUA, MAUREEN JANE L.
+CRUZ, FENDER B.
+AGAWIN, JOSHUA EZEKIEL A.
+DE LEON, KIER CYNON R.
+ZARSADIAS, TERYX B.
+CAREG, NEFTALY AYAN .
+METRAN, RAFAEL L.
+DE ROBLES, ROCHELLE CAMILLE M.
+DIAZ, GABRIEL CLINTON E.
+PETALVERO, CEEJAY L.
+DE MESA, SAVANNAH MARI B.
+CABANA, LOVELY CLAIRE M.
+MELECIA, CHRISTIAN LENARD P.
+GARCIA, JAYVEE C.
+LABIOS, JODEL G.
+IMPERIAL, JAMES WALTER O.
