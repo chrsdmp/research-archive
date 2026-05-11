@@ -1,7 +1,7 @@
-
+import Profile from './components/profile';
 function App() {
   return (
-    <h2>Hello World!</h2>
+    <Profile />
   );
 }
 
