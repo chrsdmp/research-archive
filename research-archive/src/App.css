@@ -1,0 +1,75 @@
+body {
+  background-color: #0d1b2e;
+  margin: 0;
+  padding: 0;
+}
+
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 0;
+}
+
+body {
+  background-color: #0d1b2e;
+  margin: 0;
+  padding: 0;
+}
+
+/* homepage part yung malaking acadexia sa gitna tas maliit na logo sa taas sa gitna din  */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 0;
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 120px;
+}
+
+.logo-wordmark {
+  width: 420px;
+  object-fit: contain;
+}
+
+/* article part yung dalwang logo sa kaliwa ng search bar */
+
+.article-navbar {
+  display: flex;
+  align-items: center;
+  background-color: #0f1e35;
+  padding: 12px 20px;
+  gap: 24px;
+  border: 1px solid #1e3a5f;
+}
+
+.article-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.article-logo-icon {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.article-logo-wordmark {
+  width: 110px;
+  object-fit: contain;
+}
