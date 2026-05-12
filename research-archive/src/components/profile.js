@@ -3,7 +3,6 @@ import './profile.css';
 import profileImg from './profile-acc.png';
 
 const Profile = () => {
-  // 1. STATE MANAGEMENT
   const [showModal, setShowModal] = useState(false);
   const [authView, setAuthView] = useState('login'); 
   const [currentUser, setCurrentUser] = useState({
@@ -14,13 +13,12 @@ const Profile = () => {
   const [formData, setFormData] = useState({ username: '', email: '', password: '' });
   const [error, setError] = useState('');
 
-  // Persistent storage logic
   const [users, setUsers] = useState(() => {
     const saved = localStorage.getItem('app_users');
     return saved ? JSON.parse(saved) : [];
   });
 
-  // 2. HANDLERS
+
   const handleInputChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
