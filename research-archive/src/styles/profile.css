@@ -1,4 +1,5 @@
-/* --- Profile Page Base --- */
+/* Profile Page Part */
+
 .page-container {
   display: flex;
   justify-content: center;
@@ -21,7 +22,7 @@
   color: #D1D9E9;
 }
 
-/* --- Profile Content --- */
+/* Profile Content */
 .profile-section {
   display: flex;
   align-items: center;
@@ -66,7 +67,7 @@
   margin: 20px 0;
 }
 
-/* --- Buttons --- */
+/* Buttons */
 .action-section {
   display: flex;
   justify-content: space-between;
@@ -87,7 +88,7 @@
 .primary-btn {
   background-color: #D1D9E9;
   color: #0F111A;
-  width: fit-content;
+  width: 189px;
 }
 
 .secondary-btn {
@@ -103,7 +104,7 @@
   flex: 1;
 }
 
-/* --- Login and Sign Up Modal Design --- */
+/* Login and Sign Up Modal Design */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -134,7 +135,7 @@
   margin-bottom: 20px;
 }
 
-/* --- Form Elements --- */
+/* Form Elements */
 .input-group {
   margin-bottom: 20px;
   display: flex;
@@ -166,7 +167,7 @@
   margin-top: 10px;
 }
 
-/* --- Functional UI Additions --- */
+/* Functional UI Additions (Design) */
 .error-text {
   color: #ff4d4d;
   text-align: center;
@@ -190,3 +191,5 @@
   font-weight: bold;
   margin-left: 5px;
 }
+
+/* End of Profile Page Part */

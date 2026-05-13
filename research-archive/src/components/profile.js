@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import './profile.css';
-import profileImg from './profile-acc.png';
+import './styles/profile.css';
+import profileImg from './assets/profile-acc.png';
 
 const Profile = () => {
   const [showModal, setShowModal] = useState(false);
@@ -72,7 +72,7 @@ const Profile = () => {
 
   return (
     <div className="page-container">
-      {/* --- PROFILE CARD --- */}
+      {/* PROFILE CARD */}
       <div className="card-container">
         <div className="profile-section">
           <div className="profile-image-wrapper">
