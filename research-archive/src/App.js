@@ -1,5 +1,6 @@
 import SearchBar from "./components/SearchBar";
 import Profile from "./components/profile";
+import Profile from './components/profile';
 
 function App() {
   const handleSearch = (value) => {
@@ -15,6 +16,7 @@ function App() {
         onSubmit={handleSearch}
       />
     </div>
+    <Profile />
   );
 }
 
