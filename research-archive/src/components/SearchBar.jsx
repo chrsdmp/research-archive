@@ -1,5 +1,5 @@
 import React from "react";
-
+import '../styles/searchbar.css';
 export default function SearchBar({
   value,
   onChange,
@@ -13,9 +13,9 @@ export default function SearchBar({
   };
 
   return (
-    <div style={styles.wrapper}>
-      <div style={styles.inputContainer}>   
-        <span style={styles.icon}>
+    <div className="searchbar-wrapper">
+      <div className="searchbar-input-container">   
+        <span className="searchbar-icon">
           <svg
             width="18"
             height="18"
@@ -39,42 +39,9 @@ export default function SearchBar({
           onChange={(e) => onChange(e.target.value)}
           onKeyDown={handleKeyDown}
           placeholder={placeholder}
-          style={styles.input}
+          className="searchbar-input"
         />
       </div>
     </div>
   );
 }
-
-const styles = {
-  wrapper: {
-    width: "100%",
-    display: "flex",
-    justifyContent: "center",
-  },
-  inputContainer: {
-    display: "flex",
-    alignItems: "center",
-    width: "100%",
-    maxWidth: "700px",
-    padding: "12px 16px",
-    borderRadius: "999px",
-    background: "rgba(255,255,255,0.85)",
-    backdropFilter: "blur(10px)",
-    boxShadow: "0 8px 20px rgba(0,0,0,0.2)",
-  },
-  icon: {
-    display: "flex",
-    alignItems: "center",
-    marginRight: "10px",
-    color: "#333",
-  },
-  input: {
-    width: "100%",
-    border: "none",
-    outline: "none",
-    fontSize: "16px",
-    background: "transparent",
-    color: "#111",
-  },
-};
