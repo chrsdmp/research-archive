@@ -38,11 +38,7 @@ function App() {
   function getFilteredResults() {
     let filtered = [...searchResults];
 
-    // ========================
     // 1. TIME FILTER
-    // "Since 2024" means year >= 2024 (2024 and newer)
-    // "Custom range" means year between from and to
-    // ========================
     const currentYear = new Date().getFullYear();
 
     if (timeFilter === "Since 2026") {
@@ -79,8 +75,6 @@ function App() {
 
     // ========================
     // 2. ARTICLE TYPE FILTER
-    // CORE API has no type field so we search keywords
-    // in the title and abstract text
     // ========================
     if (typeFilter !== "Any type") {
       const typeKeywords = {
@@ -102,8 +96,8 @@ function App() {
 
     // ========================
     // 3. SORT
-    // "Sort by date"      = newest articles first
-    // "Sort by relevance" = keep original API order (best match first)
+    // "Sort by date"     
+    // "Sort by relevance" 
     // ========================
     if (sortFilter === "Sort by date") {
       // Use spread [...] to avoid mutating the original array
