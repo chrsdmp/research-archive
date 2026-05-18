@@ -1,0 +1,132 @@
+/* App.css */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html,
+#root {
+    width: 100%;
+    height: 100%;
+    font-family: "Poppins", sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-image: url("/BlueBackground.svg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* Top Left Buttons */
+.top-left {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    display: flex;
+    gap: 12px;
+}
+
+.nav-btn {
+    background: transparent;
+    color: white;
+    padding: 6px 12px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Logo */
+.logo-box {
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 8px 18px;
+}
+
+.logo {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    filter: brightness(100);
+}
+
+/* Title */
+.title-box {
+    position: absolute;
+    top: 130px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 30px;
+}
+
+.title-box h1 {
+    font-size: 92px;
+    color: white;
+    font-family: "Times New Roman", serif;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+/* Search */
+.search-container {
+    position: absolute;
+    top: 245px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 560px;
+    height: 70px;
+    background: #dfe3ef;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+}
+
+.search-icon {
+    color: #252525;
+    margin-right: 15px;
+}
+
+.search-input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 28px;
+    color: #333;
+}
+
+.search-input::placeholder {
+    color: #333;
+}
+
+/* Subtitle */
+.subtitle-box {
+    position: absolute;
+    top: 355px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+}
+
+.subtitle-box p {
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    line-height: 1.4;
+}
