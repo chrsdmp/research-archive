@@ -1,39 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  background: #0b1020;
-  color: #f1f5ff;
-  font-family: 'DM Sans', sans-serif;
-  min-height: 100vh;
-  padding: 50px 20px;
+body,
+html,
+#root {
+  width: 100%;
+  height: 100%;
+  font-family: "Poppins", sans-serif;
 }
 
-/* PAGE */
-.page {
-  max-width: 800px;
-  margin-left: auto;
-  margin-top: 50px;
-  margin-right: 100px;
-}
-
-/* TITLE */
-.title {
-  font-family: 'Intrade Demo',sans-serif;
-  font-size: 20px;
-  font-weight: 100;
-  margin-bottom: 15px;
-  margin-left: 20px;
-}
-
-
-/* CONTAINER */
 .container {
-  background: #D2DBEB;
-  padding: 40px;
-  border-radius: 18px;
-  border: 1px solid rgba(255,255,255,0.08);
+  width: 100%;
+  height: 100vh;
+  background-image: url("research-archive/src/components/BlueBackground.svg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 30, 0.45);
+  position: relative;
+}
+
+/* Top Left Buttons */
+.top-left {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  display: flex;
+  gap: 12px;
+}
+
+.nav-btn {
+  background: transparent;
+  border: 1px dotted #00aaff;
+  color: white;
+  padding: 6px 12px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Logo */
+.logo-box {
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px dotted #00aaff;
+  padding: 8px 18px;
+}
+
+.logo {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  filter: brightness(100);
+}
+
+/* Title */
+.title-box {
+  position: absolute;
+  top: 130px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px dotted #00aaff;
+  padding: 10px 30px;
+}
+
+.title-box h1 {
+  font-size: 92px;
+  color: white;
+  font-family: "Times New Roman", serif;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+/* Search */
+.search-container {
+  position: absolute;
+  top: 300px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 560px;
+  height: 70px;
+  background: #dfe3ef;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+}
+
+.search-icon {
+  color: #252525;
+  margin-right: 15px;
+}
+
+.search-input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 24px;
+  color: #333;
+}
+
+.subtitle-box {
+  position: absolute;
+  top: 410px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px dotted #00aaff;
+  padding: 10px 20px;
+}
+
+.subtitle-box p {
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  line-height: 1.4;
 }
