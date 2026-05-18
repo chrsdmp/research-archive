@@ -1,15 +1,26 @@
-import React, { useState } from 'react';
-import './styles/profile.css';
-import profileImg from './assets/profile-acc.png';
+import React, { useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import '../styles/profile.css';
+import profileImg from '../assets/profile-acc.png';
+import { closeProfile, openProfile } from '../store/uiSlice';
 
-const Profile = () => {
+const Profile = ({ user, onLogin, onLogout }) => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
   const [showModal, setShowModal] = useState(false);
   const [authView, setAuthView] = useState('login'); 
-  const [currentUser, setCurrentUser] = useState({
+  const [currentUser, setCurrentUser] = useState(user ?? {
     username: 'Guest',
-    email: '--'
+    email: '--',
   });
   
+  useEffect(() => {
+    if (user) {
+      setCurrentUser(user);
+    }
+  }, [user]);
+
   const [formData, setFormData] = useState({ username: '', email: '', password: '' });
   const [error, setError] = useState('');
 
@@ -18,6 +29,23 @@ const Profile = () => {
     return saved ? JSON.parse(saved) : [];
   });
 
+  useEffect(() => {
+    dispatch(openProfile());
+    return () => {
+      dispatch(closeProfile());
+    };
+  }, [dispatch]);
+
+  const handleClose = () => {
+    dispatch(closeProfile());
+    setShowModal(false);
+    navigate('/');
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+    setError('');
+  };
 
   const handleInputChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -51,17 +79,21 @@ const Profile = () => {
     );
 
     if (foundUser) {
-      setCurrentUser(foundUser); 
+      const loggedUser = { ...foundUser, image: profileImg };
+      setCurrentUser(loggedUser);
+      onLogin?.(loggedUser);
       setShowModal(false);       
       setError("");
       setFormData({ username: '', email: '', password: '' }); 
+      navigate('/');
     } else {
       setError("Invalid credentials or account doesn't exist.");
     }
   };
 
   const handleSignOut = () => {
-    setCurrentUser({ username: 'Guest', email: '--' });
+    setCurrentUser({ username: 'Guest', email: '--',});
+    onLogout?.();
   };
 
   const openAddAccount = () => {
@@ -71,15 +103,17 @@ const Profile = () => {
   };
 
   return (
-    <div className="page-container">
+    <div className="page-container" onClick={handleClose}>
       {/* PROFILE CARD */}
-      <div className="card-container">
+      <div className="card-container" onClick={(e) => e.stopPropagation()}>
         <div className="profile-section">
           <div className="profile-image-wrapper">
             <img src={profileImg} alt="Profile" className="profile-image" />
           </div>
           <div className="profile-info">
-            <h2 className="user-name">{currentUser.username}</h2>
+            <div className="profile-name-row">
+              <h2 className="user-name">{currentUser.username}</h2>
+            </div>
             <p className="user-email">{currentUser.email}</p>
             <button className="btn primary-btn">My Account</button>
           </div>
@@ -97,7 +131,7 @@ const Profile = () => {
 
       {/* --- Login and Sign Up Modals --- */}
       {showModal && (
-        <div className="modal-overlay" onClick={() => setShowModal(false)}>
+        <div className="modal-overlay" onClick={handleCloseModal}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             
             {authView === 'login' ? (
@@ -115,7 +149,7 @@ const Profile = () => {
                   {error && <p className="error-text">{error}</p>}
                   <div className="modal-actions">
                     <button type="submit" className="btn secondary-btn">Login</button>
-                    <button type="button" className="btn cancel-btn" onClick={() => setShowModal(false)}>Cancel</button>
+                    <button type="button" className="btn cancel-btn" onClick={handleCloseModal}>Cancel</button>
                   </div>
                 </form>
                 <p className="toggle-text">
@@ -141,7 +175,7 @@ const Profile = () => {
                   {error && <p className="error-text">{error}</p>}
                   <div className="modal-actions">
                     <button type="submit" className="btn secondary-btn">Sign Up</button>
-                    <button type="button" className="btn cancel-btn" onClick={() => setShowModal(false)}>Cancel</button>
+                    <button type="button" className="btn cancel-btn" onClick={handleCloseModal}>Cancel</button>
                   </div>
                 </form>
                 <p className="toggle-text">
