@@ -1,5 +1,7 @@
 import React from "react";
 import "./App.css";
+import { Search } from "lucide-react";
+import logo from "./logo.svg";
 
 function App() {
     return (
@@ -15,7 +17,7 @@ function App() {
                 {/* Logo */}
                 <div className="logo-box">
                     <img
-                        src="/Logo.svg"
+                        src={logo}
                         alt="logo"
                         className="logo"
                     />
@@ -28,7 +30,7 @@ function App() {
 
                 {/* Search Bar */}
                 <div className="search-container">
-                    <span className="search-icon">🔍</span>
+                    <Search className="search-icon" size={28} />
 
                     <input
                         type="text"

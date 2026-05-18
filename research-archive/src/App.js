@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import { Search } from "lucide-react";
+import logo from "./logo.svg";
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
         {/* Logo */}
         <div className="logo-box">
           <img
-            src="research-archive/src/components/Logo.svg"
+            src={logo}
             alt="logo"
             className="logo"
           />

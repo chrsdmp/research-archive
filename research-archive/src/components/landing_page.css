@@ -1,5 +1,3 @@
-/* App.css */
-
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
 
 * {
@@ -19,7 +17,7 @@ html,
 .container {
     width: 100%;
     height: 100vh;
-    background-image: url("/BlueBackground.svg");
+    background-image: url("./BlueBackground.svg");
     background-size: cover;
     background-position: center;
     position: relative;
@@ -29,6 +27,7 @@ html,
 .overlay {
     width: 100%;
     height: 100%;
+    background: rgba(0, 0, 30, 0.45);
     position: relative;
 }
 
@@ -43,6 +42,7 @@ html,
 
 .nav-btn {
     background: transparent;
+    border: none;
     color: white;
     padding: 6px 12px;
     font-size: 14px;
@@ -85,7 +85,7 @@ html,
 /* Search */
 .search-container {
     position: absolute;
-    top: 245px;
+    top: 300px;
     left: 50%;
     transform: translateX(-50%);
     width: 560px;
@@ -107,18 +107,18 @@ html,
     border: none;
     outline: none;
     background: transparent;
-    font-size: 28px;
+    font-size: 24px;
     color: #333;
 }
 
 .search-input::placeholder {
-    color: #333;
+    color: #7a7a7a;
+    opacity: 1;
 }
 
-/* Subtitle */
 .subtitle-box {
     position: absolute;
-    top: 355px;
+    top: 410px;
     left: 50%;
     transform: translateX(-50%);
     padding: 10px 20px;
