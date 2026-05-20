@@ -1,3 +1,5 @@
+import AcadexiaLibrary from './library_box.jsx';
+
 export const NAV_TABS = ["My Library", "My Reading List", "Archive"];
 
 export const TIME_FILTERS = [
