@@ -1,9 +1,8 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { Routes, Route, useNavigate } from "react-router-dom";
-import SearchBar from "./components/SearchBar";
 import Profile from "./components/profile";
-import SidePanel from "./sidepanel/sidePanel";
+import SidePanel from "./components/sidePanel";
 import profileImg from "./assets/profile-acc.png";
 import { openProfile } from "./store/uiSlice";
 import searchAPI from "./api/search";
@@ -222,7 +221,7 @@ function App() {
           )}
 
           {/* Show results */}
-          {!loading && filteredResults.length > 0 && (
+          {!loading && hasSearched && filteredResults.length > 0 && (
             <div>
 
               {/* Heading */}
