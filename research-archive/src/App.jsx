@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./AcadexiaLibrary.css";
+import "./App.css";
 import {
   NAV_TABS,
   TIME_FILTERS,
